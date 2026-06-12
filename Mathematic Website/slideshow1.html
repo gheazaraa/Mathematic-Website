@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>My math</title>
+	<link rel="stylesheet" href="stylecss.css">
+	<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	<style>
+	.content_utama .content .item{
+	margin: 10px auto;
+	width: 800px;
+	height: 409px;
+	display: block;
+	border: 5px solid white;
+	box-shadow: 0px 0px 10px black;
+	}
+	p{
+	text-align: center;
+	width: 800px;
+	margin: 10px auto;
+}
+.layer_dalam{
+	position: relative;
+	max-width: 1250px;
+	width: 100%;
+	height: 760px;
+	background: url('pink bag.jpg');
+	background-size: cover;
+	margin: 30px  auto;
+	border-radius:  25px;
+	display: flex;
+	}
+	p{
+	text-align: center;
+	width: 800px;
+	margin: 10px auto;
+	}
+	#prev{float: left;}
+	#next{float: right;}
+	
+	.lembar{
+	background:#FFE4B5;
+	padding: 50px;
+	margin-top: 70px;
+	opacity: 0.8;
+	}
+	:link {color:red;}
+:visited {color:blue;}
+a:hover{color:aqua;}
+	
+	</style>
+</head>
+<body>
+
+<div class="layer">
+	<div class="layer_dalam">
+		<div class="layer_vertikal">
+			<div class="sidebar">
+			<div class="profile">
+			<div class="image">
+			<img src="all.jpg" border="5" alt=profile_pic" style="width:100px;">
+				</div>
+				<h2 class="title">Website Matematika</h2>
+				</div>
+				<ul class="menu">
+					<li><a href="pengertian.html">
+						<span class="icon">
+						<i class="fas fa-book"></i>
+						</span>
+						<span class="text">Pengertian</span>
+					</a></li>
+					<li><a href="slideshow1.html">
+						<span class="icon">
+						<i class="fas fa-folder"></i>
+						</span>
+						<span class="text">Jenis-Jenis</span>
+					</a></li>
+					<li><a href="rumus.html">
+						<span class="icon">
+						<i class="fas fa-cubes"></i>
+						</span>
+						<span class="text">Rumus</span>
+					</a></li>
+					<li><a href="contohsoal.html">
+						<span class="icon">
+						<i class="fas fa-clipboard"></i>
+						</span>
+						<span class="text">Contoh Soal</span>
+					</a></li>
+					<li><a href="video.html">
+						<span class="icon">
+						<i class="fas fa-video"></i>
+						</span>
+						<span class="text">Video</span>
+					</a></li>
+					<li><a href="soal pilihan ganda.html">
+						<span class="icon">
+						<i class="fas fa-graduation-cap"></i>
+						</span>
+						<span class="text">Latihan Soal</span>
+					</a></li>
+				</ul>
+				<ul class="social">
+					<li><a href="perihall.html"><i class="fa-solid fa-landmark"></i></a></li>
+					<li><a href="about us.html"><i class="fa-solid fa-user"></i></a></li>
+					<li><a href="contact us.html"><i class="fa-brands fa-whatsapp"></i></a></li>
+					</ul>
+				</div>
+				</div>
+				<div class="content_utama">
+				<div class="bagian1">
+				<div class="bagian2">
+				<a href="html cover.html" style="color:#fff;" ><i class="fa-solid fa-house"></i></a>
+				</div>
+				<div class="logo">
+				Bangun <span>Ruang</span>
+				</div>
+				</div>
+				<div class="content">
+				<div class="item">
+					<div>
+	<a id="linkshow" href="http://www.google.com">
+	<img id="slideshow" width="790" height="400" src="coversld.jpeg">
+	</a>
+	</div>
+	<p>
+		<button id="start">Start Sideshow</button>
+		<button id="stop">Stop Slideshow</button>
+		<button id="prev"> << Prev </button>
+		<button id="next">Next>></button>
+		</p>
+		<script>
+		var slideshowNode = document.getElementById("slideshow");
+		var linkshowNode = document.getElementById("linkshow");
+		var startNode = document.getElementById("start");
+		var stopNode = document.getElementById("stop");
+		var prevNode = document.getElementById("prev");
+		var nextNode = document.getElementById("next");
+		
+		var arrayGambar = ["coversld.jpeg","kubuss.jpeg",
+							"balok.jpeg","prisma3.jpeg","prisma4.jpeg","prisma5.jpeg",
+							"prisma6.jpeg","limas3.jpeg","limas4.jpeg","limas5.jpeg","limas6.jpeg","kerucut.jpeg",
+							"tabung.jpeg","bola.jpeg" ,];
+		var arrayLink = ["http://www.google.com","http://www.twitter.com",
+							"http://www.facebook.com","http://www.bing.com",
+							"http://www.duniailkom.com"];
+		var counter = 0;
+		var intervalID = 0;
+		function nextSlideshow(){counter++;
+		if (counter===14){counter=0;}
+		slideshowNode.setAttribute("src",arrayGambar[counter]);
+		linkshowNode.setAttribute("href",arrayLink[counter]);
+		}
+		function prevSlideshow(){counter--;
+		if (counter=== -1){counter=13;}
+		slideshowNode.setAttribute("src",arrayGambar[counter]);
+		linkshowNode.setAttribute("href",arrayLink[counter]);
+		}
+		function startSlideshow(){
+		if (intervalID ===0){intervalID = setInterval(nextSlideshow,2000);}
+		}
+		function stopSlideshow(){clearInterval(intervalID);intervalID = 0;}
+		
+		prevNode.addEventListener("click",prevSlideshow);
+		nextNode.addEventListener("click",nextSlideshow);
+		startNode.addEventListener("click",startSlideshow);
+		stopNode.addEventListener("click",stopSlideshow);
+		</script><br><br><br>
+				</div>
+				<div class="lembar">
+					<h2><b>Jenis-Jenis Bangun Ruang</b></h2>
+			Berikut ini akan kami berikan macam-macam dari bangun ruang, mulai dari bangun ruang sisi datar yang meliputi kubus, balok, prisma, dan limas. Hingga bangun ruang sisi lengkung yang meliputi kerucut, tabung, dan bola.<br><br>
+			<li>
+    <details>
+        <summary>
+            <span><b>Kubus</b></span>
+        </summary>
+
+        <p align="justify">
+            Kubus adalah bangun ruang tiga dimensi yang dibatasi oleh enam bidang sisi yang kongruen berbentuk bujur sangkar.
+        </p>
+
+        <b>Sifat-Sifat Bangun Kubus:</b>
+
+        <figure>
+            <img src="kubuss.jpeg" width="400" height="200" border="3" alt="Kubus">
+
+            <figcaption>
+                Gambar diambil dari:
+                <a href="https://www.yuksinau.id/wp-content/uploads/2019/08/bangun-ruang-kubus.jpg" target="_blank">
+                    yuksinau.id
+                </a>
+            </figcaption>
+        </figure>
+
+        <ol type="a">
+            <li>Memiliki 6 sisi berbentuk persegi yang sama luas.</li>
+            <li>Memiliki 12 rusuk yang sama panjang.</li>
+            <li>Memiliki 8 titik sudut.</li>
+            <li>Memiliki 4 diagonal ruang.</li>
+            <li>Memiliki 12 bidang diagonal.</li>
+        </ol>
+    </details>
+</li>
+			<p align="justify"><b><span style="color:orange"><li><details><summary>Balok</span></b><br></summary>
+			Balok adalah bangun ruang tiga dimensi yang dibentuk oleh tiga pasang persegi atau persegi panjang, dengan paling tidak satu pasang di antaranya berukuran berbeda.<br><br>
+			<I><b>Sifat-Sifat Bangun Balok :</I></b><br>
+			<ol type="a">
+			<p><img title="Unsur unsur balok" src="balok.jpeg" width="550" height="200" border="3"></p>
+			<figcaption>
+			<p align="center">gambar diambil dari :
+			<a href="https://cilacapklik.com/wp-content/uploads/2020/09/Screenshot_2020-09-18-21-30-17-535_com.adsk_.sketchbook-picsay-1.jpg">cilacapklik.com</a>
+			</figcaption>
+			<li>Memiliki 6 sisi berbentuk persegi panjang<br>
+            <li>Memiliki 12 rusuk <br>
+			<li>Memiliki 8 titik sudut<br>
+			<li>Memiliki 4 buah diagonal ruang<br>
+			<li>Memiliki 12 buah bidang diagonal<br>
+			</ol>
+			</li>
+			</details>
+			<p align="justify"><li><b><span style="color:orange"><details><summary>Prisma</span></b><br></summary>
+			prisma adalah bangun ruang tiga dimensi yang dibatasi oleh alas dan tutup identik berbentuk segi-n dan sisi-sisi tegak berbentuk persegi atau persegi panjang. Dengan kata lain prisma adalah bangun ruang yang mempunyai penampang melintang yang selalu sama dalam bentuk dan ukuran.<br><br>
+			<I><b>Macam-macam Bangun Prisma :</I></b><br>
+			<ol type="a">
+			<li><b>Prisma Segitiga</b><br>
+		    <p><img title="Prisma segitiga" src="prisma3.jpeg" width="550" height="200" border="3"></p>
+			<p align="center">gambar diambil dari :
+			<a href="https://blue.kumparan.com/image/upload/fl_progressive,fl_lossy,c_fill,q_auto:best,w_640/v1607651168/rryq68ovba0xatlrluv0.png">blue.cumparan.com</a>
+			</figcaption>
+			<ul>
+			<I><u>Sifat-Sifat Bangun Prisma Segitiga :</I></u><br>
+			<li>Memiliki 5 sisi <br>
+            <li>Memiliki 9 rusuk <br>
+			<li>Memiliki 6 titik sudut<br><br>
+			</ul>
+			</li>
+		    <li><b>Prisma Segiempat</b><br>
+		    <p><img title="Prisma SegiEmpat" src="prisma4.jpeg" width="450" height="200" border="3"></p>
+			<figcaption>
+			<p align="center">gambar diambil dari :
+			<a href="https://caraharian.com/wp-content/uploads/2020/05/Prisma-Segi-Empat.jpg">caraharian.com</a>
+			</figcaption>
+		Kubus dan balok merupakan bagian dari prisma segi empat<br><br>
+			<b><li>Prisma Segilima</b><br>
+			<p><img title="prisma segilima" src="prisma5.jpeg" width="350" height="200" border="3"></p>
+			<figcaption>
+			<p align="center">gambar diambil dari :
+			<a href="https://id-static.z-dn.net/files/d5a/0b85987fe9e63aac7c960c3d4c10e076.jpg">id-static.z-dn.net</a>
+			</figcaption>
+			
+			<I><u>Sifat-Sifat Bangun Prisma Segilima :</I></u><br>
+			<ul>
+			<li>Memiliki 7 sisi <br>
+            <li>Memiliki 15 rusuk <br>
+			<li>Memiliki 10 titik sudut<br><br>
+			</ul>
+			</li>
+			<b><li>Prisma Segienam</b><br>
+			<p><img title="Prisma segienam" src="prisma6.jpeg" width="350" height="200" border="3"></p>
+			<figcaption>
+			<p align="center">gambar diambil dari :
+			<a href="https://rumusrumus.com/wp-content/uploads/2017/12/Prisma-Segi-Enam.png">rumusrumus.com</a>
+			</figcaption>
+			<I><u>Sifat-Sifat Bangun Prisma Segienam :</I></u><br>
+			<ul>
+			<li>Memiliki 8 sisi <br>
+            <li>Memiliki 18 rusuk <br>
+			<li>Memiliki 12 titik sudut<br><br><br>
+			</ul>
+			</li>
+			<b><I>Secara umum sifat dari bangun prisma adalah :</b></I><br>
+			<ul>
+			<li>Memiliki n+2 sisi<br>
+			<li>Memiliki 3xn rusuk<br>
+			<li>Memiliki 2xn titik sudut<br><br>
+			</ol>
+			</li></details>
+			<p align="justify"><li><b><span style="color:orange"><details><summary>Limas</span></b><br></summary>
+			limas adalah bangun ruang tiga dimensi yang dibatasi oleh alas berbentuk segi-n dan sisi-sisi tegak berbentuk segitiga.<br><br>
+			<I><b>Macam-macam Bangun limas :</I></b><br>
+		<ol type="a">
+			<li><b>limas Segitiga</b><br>
+			<p><img title="Limas segitiga" src="limas3.jpeg" width="350" height="200" border="3"></p>
+			<figcaption>
+			<p align="center">gambar diambil dari :
+			<a href="https://rumusrumus.com/wp-content/uploads/2017/12/Rumus-Volume-Limas-Segitiga.png">rumusrumus.com</a>
+			</figcaption>
+			<I><u>Sifat-Sifat Bangun Limas Segitiga :</I></u><br>
+			<ul>
+			<li>Memiliki 4 sisi <br>
+            <li>Memiliki 6 rusuk <br>
+			<li>Memiliki 4 titik sudut<br><br>
+			</ul>
+			</li>
+		    <li><b>Limas Segiempat</b><br>
+			<p><img title="Limas persegi" src="limas4.jpeg" width="350" height="200" border="3"></p>
+			<figcaption>
+			<p align="center">gambar diambil dari :
+			<a href="https://gurubelajarku.com/wp-content/uploads/2019/06/Limas-Persegi.jpg">gurubelajarku.com</a>
+			</figcaption>
+			<I><u>Sifat-Sifat Bangun Limas persegi :</I></u><br>
+			<ul>
+			<li>Memiliki 5 sisi <br>
+            <li>Memiliki 8 rusuk <br>
+			<li>Memiliki 5 titik sudut<br><br>
+			</ul>
+			</li>
+			<li><b>Limas Segilima</b><br>
+			<p><img title="Limas segilima" src="limas5.jpeg" width="350" height="200" border="3"></p>
+			<figcaption>
+			<p align="center">gambar diambil dari :
+			<a href="https://rumusrumus.com/wp-content/uploads/2017/12/Limas-Segi-Lima.png">rumusrumus.com</a>
+			</figcaption>
+			<I><u>Sifat-Sifat Bangun limas Segilima :</I></u><br>
+			<ul>
+			<li>Memiliki 6 sisi <br>
+            <li>Memiliki 10 rusuk <br>
+			<li>Memiliki 6 titik sudut<br><br>
+			</ul>
+			</li>
+			<li><b> limas Segienam</b><br>
+			<p><img title="Limas segienam" src="limas6.jpeg" width="350" height="200" border="3"></p>
+			<figcaption>
+			<p align="center">gambar diambil dari :
+			<a href="https://id-static.z-dn.net/files/d20/1752b08a40fc80022b5996b352287d16.jpg">id-static.z-dn.net</a>
+			</figcaption>
+			<I><u>Sifat-Sifat Bangun limas Segienam :</I></u><br>
+			<ul>
+			<li>Memiliki 7 sisi <br>
+            <li>Memiliki 12 rusuk <br>
+			<li>Memiliki 7 titik sudut<br><br><br>
+			<b><I>Secara umum sifat dari bangun limas adalah :</b></I><br>
+			<li>Memiliki n+1 sisi<br>
+		<li>Memiliki 2xn rusuk<br>
+			<li>Memiliki n+1 titik sudut<br><br>
+			</ol>
+			</li></details>
+			<li><p align="justify"> <b><span style="color:orange"><details><summary>Kerucut</span></b><br></summary>
+			kerucut adalah sebuah limas istimewa yang beralas lingkaran.<br><br>
+			<p><img title="Kerucut" src="kerucut.jpeg" width="350" height="200" border="3"></p>
+			<figcaption>
+			<p align="center">gambar diambil dari :
+			<a href="https://asset.kompas.com/crops/A_ouCXmXeJiEA6uTwQoWPcuPVCU=/57x14:505x312/750x500/data/photo/2021/03/03/603fb512a73fa.jpg">asset.kompsas.com</a>
+			</figcaption>
+			<I><b>Sifat-Sifat Bangun Kerucut :</I></b><br>
+			<ul>
+			<li>Memiliki 2 sisi<br>
+            <li>Memiliki 1 rusuk<br>
+			<li>Memiliki 1 titik sudut<br>
+			</ul>
+			</li>
+			</details>
+			<li><p align="justify"><b><span style="color:orange"><details><summary>Tabung</span></b><br></summary>
+			Tabung atau silinder adalah bangun ruang tiga dimensi yang dibentuk oleh dua buah lingkaran identik yang sejajar dan sebuah persegi panjang yang mengelilingi kedua lingkaran tersebut. <br><br>
+			<p><img title="tabung" src="tabung.jpeg" width="350" height="200" border="3"></p>
+			<figcaption>
+			<p align="center">gambar diambil dari :
+			<a href="https://www.geogebra.org/resource/gxnmxxch/v3QFfNMyaEI3cVCm/material-gxnmxxch.png">geogebra.org</a>
+			</figcaption>
+			<I><b>Sifat-Sifat Bangun Tabung :</I></b><br>
+			<ul>
+			<li>Memiliki 3 sisi<br>
+			</ul>
+			</li>
+            </details>
+			<li><p align="justify"><b><span style="color:orange"><details><summary>Bola</span></b><br></summary>
+			Bola merupakan salah satu bangun ruang sisi lengkung yang dibatasi oleh satu bidang lengkung. Atau juga bisa didefinisikan sebagai sebuah bangun ruang berbentuk setengah lingkaran yang diputar mengelilingi garis tengahnya.<br><br>
+			<p><img title="Bola" src="bola.jpeg" width="550" height="200" border="3"></p>
+			<figcaption>
+			<p align="center">gambar diambil dari :
+			<a href="https://haloedukasi.com/wp-content/uploads/2020/03/bola.png">haloedukasi.com</a>
+			</figcaption>
+			<I><b>Sifat-Sifat Bangun Bola :</I></b><br>
+			<ul>
+			<li>Bola memiliki 1 sisi serta 1 titik pusat.<br>
+            <li>Bola tidak memiliki rusuk dan titik sudut<br>
+			</ul>
+			</li>
+			</details>
+				</div>
+				
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</body>
+	</html>

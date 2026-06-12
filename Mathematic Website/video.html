@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>My math</title>
+	<link rel="stylesheet" href="stylecss.css">
+	<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	<style>
+	.content_utama .content .item{
+	background:#FFE4B5;
+	padding: 50px;
+	margin-bottom: 25px;
+	opacity: 0.9;
+	margin: auto;
+	display: block;
+	border: 5px solid white;
+	box-shadow: 0px 0px 10px black;
+}
+.layer_dalam{
+	position: relative;
+	max-width: 1250px;
+	width: 100%;
+	height: 760px;
+	background: url('back.jpg');
+	background-size: cover;
+	margin: 30px  auto;
+	border-radius:  25px;
+	display: flex;
+	}
+	
+	p{
+	text-align: center;
+	width: 800px;
+	margin: 10px auto;
+	}
+	#prev{float: left;}
+	#next{float: right;}
+	</style>
+</head>
+<body>
+
+<div class="layer">
+	<div class="layer_dalam">
+		<div class="layer_vertikal">
+			<div class="sidebar">
+			<div class="profile">
+			<div class="image">
+			<img src="all.jpg" border="5" alt="profile_pic" style="width:100px;">
+				</div>
+				<h2 class="title">Website Matematika</h2>
+				</div>
+				<ul class="menu">
+					<li><a href="pengertian.html">
+						<span class="icon">
+						<i class="fas fa-book"></i>
+						</span>
+						<span class="text">Pengertian</span>
+					</a></li>
+					<li><a href="slideshow1.html">
+						<span class="icon">
+						<i class="fas fa-folder"></i>
+						</span>
+						<span class="text">Jenis-Jenis</span>
+					</a></li>
+					<li><a href="rumus.html">
+						<span class="icon">
+						<i class="fas fa-cubes"></i>
+						</span>
+						<span class="text">Rumus</span>
+					</a></li>
+					<li><a href="contohsoal.html">
+						<span class="icon">
+						<i class="fas fa-clipboard"></i>
+						</span>
+						<span class="text">Contoh Soal</span>
+					</a></li>
+					<li><a href="video.html">
+						<span class="icon">
+						<i class="fas fa-video"></i>
+						</span>
+						<span class="text">Video</span>
+					</a></li>
+					<li><a href="soal pilihan ganda.html">
+						<span class="icon">
+						<i class="fas fa-graduation-cap"></i>
+						</span>
+						<span class="text">Latihan Soal</span>
+					</a></li>
+				</ul>
+				<ul class="social">
+					<li><a href="perihall.html"><i class="fa-solid fa-landmark"></i></a></li>
+					<li><a href="about us.html"><i class="fa-solid fa-user"></i></a></li>
+					<li><a href="contact us.html"><i class="fa-brands fa-whatsapp"></i></a></li>
+					</ul>
+				</div>
+				</div>
+				<div class="content_utama">
+				<div class="bagian1">
+				<div class="bagian2">
+				<a href="html cover.html" style="color:#fff;" ><i class="fa-solid fa-house"></i></a>
+				</div>
+				<div class="logo">
+				Bangun <span>Ruang</span>
+				</div>
+				</div>
+				<div class="content">
+				<div class="item">
+				<iframe id="slideshow"
+					width="840"
+					height="400"
+					src="https://www.youtube.com/embed/q50HvRP1n4E"
+					title="YouTube video player"
+					frameborder="0"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+					allowfullscreen>
+				</iframe>
+	</div>
+	<p>
+		<button id="start">Start Sideshow</button>
+		<button id="stop">Stop Slideshow</button>
+		<button id="prev"> << Prev </button>
+		<button id="next">Next>></button>
+		</p>
+		<script>
+		var slideshowNode = document.getElementById("slideshow");
+		var startNode = document.getElementById("start");
+		var stopNode = document.getElementById("stop");
+		var prevNode = document.getElementById("prev");
+		var nextNode = document.getElementById("next");
+		
+		var arrayGambar = [
+						"https://www.youtube.com/embed/q50HvRP1n4E",
+						"https://www.youtube.com/embed/LYzGIQbOjAw"
+						];
+		var counter = 0;
+		var intervalID = 0;
+		function nextSlideshow(){
+    counter++;
+
+			if(counter >= arrayGambar.length){
+				counter = 0;
+			}
+
+			slideshowNode.src = arrayGambar[counter];
+		}
+
+		function prevSlideshow(){
+			counter--;
+
+			if(counter < 0){
+				counter = arrayGambar.length - 1;
+			}
+
+			slideshowNode.src = arrayGambar[counter];
+		}
+		function startSlideshow(){
+		if (intervalID ===0){intervalID = setInterval(nextSlideshow,2000);}
+		}
+		function stopSlideshow(){clearInterval(intervalID);intervalID = 0;}
+		
+		prevNode.addEventListener("click",prevSlideshow);
+		nextNode.addEventListener("click",nextSlideshow);
+		startNode.addEventListener("click",startSlideshow);
+		stopNode.addEventListener("click",stopSlideshow);
+		</script>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	</body>
+	</html>
