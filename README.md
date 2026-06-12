@@ -1,0 +1,2 @@
+# Mathematic-Website
+An interactive mathematics website developed using HTML, CSS, and JavaScript. It provides various mathematics learning features, including study materials, formulas, and practice exercises, with a responsive and user friendly interface.
